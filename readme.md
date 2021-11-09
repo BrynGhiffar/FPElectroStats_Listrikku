@@ -1,15 +1,13 @@
 # Listrikku
 
 **Live Link:**
-
 **Course:** Human Interaction (COMP6800001) - Final Project
-
+**Class:** L1AC
 **Team:** ElectroStats
-
 **Members:**
 
-* Bryn Ghiffar
-* Hansel Ferren
+* Bryn Ghiffar - 2502087263
+* Hansel Ferren - 2501990350
 
 ### Description
 
