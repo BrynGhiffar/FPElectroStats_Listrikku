@@ -30,6 +30,10 @@ The application is intended to measure the electricity usages of the user and pr
 
 ![](./docs/app_logo.svg)
 
+![](./docs/inv_comp_logo.svg)
+
+![](./docs/inv_less_contrast_comp_logo.svg)
+
 ### Poster
 
 ![](./docs/poster.png)
