@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navbar CSS*/
+
+nav {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    border-bottom:#fbd400 0.1rem solid;
+
+    --accent-color:#fbd400; 
+    --background-color: #131722;
+}
+
+
+.flex-parent1 {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.height3em {
+    height: 3rem;
+}
+
+.nav-bottom {
+    border-top: solid 0.1rem var(--accent-color);
+}
+
+.nav-bottom a {
+    font-size: 1.1rem;
+    font-weight:bold;
+    margin: 0 1.2rem;
+    padding: 1.1rem 0;
+    position: relative;
+}
+
+.nav-bottom a::before {
+    content: '';
+    position: absolute;
+    top: 0;bottom: 0; left: 0; right: 0;
+    /* background-color: var(--accent-color); */
+    border-bottom: solid 0.4rem var(--accent-color);
+    border-top: solid 0.4rem var(--accent-color);
+    /* height: 0.4rem; */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.nav-bottom a:hover::before,
+.nav-bottom a:focus::before
+{
+    transform: scaleX(1);
+}
+
+nav .comp-logo {
+    height: 8rem;
+    display: block;
+}
