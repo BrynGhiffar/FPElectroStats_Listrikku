@@ -68,3 +68,11 @@ nav .comp-logo {
     height: 8rem;
     display: block;
 }
+/* Charts CSS*/
+.container {
+    display: flex;
+    justify-content: center;
+    /* height:50vh; */
+    /* clear: both; */
+    background-color: #131722;
+}
