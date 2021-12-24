@@ -46,7 +46,7 @@ let ChartDataColor = (opacity) => {
 };
 
 let getDailyChartTitle = (month) => {
-    return `Daily Usage | ${month}`;
+    return `DAILY | ${month}`;
 }
 
 let dailyChart = new Chart(myChart, {
@@ -224,7 +224,7 @@ let monthlyChart = new Chart(document.getElementById('monthlyChart').getContext(
         plugins: {
             title: {
                 display: true,
-                text: "Monthly Usage",
+                text: "MONTHLY",
                 color: ChartDataColor(1),
                 font: {
                     size: 30,
