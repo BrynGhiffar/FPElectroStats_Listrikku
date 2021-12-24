@@ -74,5 +74,31 @@ nav .comp-logo {
     justify-content: center;
     /* height:50vh; */
     /* clear: both; */
+}
+
+main {
+    padding: 2rem 0;
     background-color: #131722;
+}
+
+footer {
+    background-color: var(--background-color);
+    display: flex;
+
+    --background-color: #232733;
+}
+
+.footer-left {
+    display: flex;
+    padding: 2rem;
+}
+
+.footer-left img {
+    height: 8rem;
+}
+
+.footer-right {
+    color: white;
+    padding: 2rem;
+    font-size: 1.3rem;
 }
