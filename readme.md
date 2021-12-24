@@ -1,6 +1,6 @@
 # Listrikku
 
-**Live Link:**
+**Live Link: https://brynghiffar.github.io/FPElectroStats_Listrikku/**
 
 **Course:** Human Interaction (COMP6800001) - Final Project
 
