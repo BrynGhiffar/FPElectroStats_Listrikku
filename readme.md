@@ -26,14 +26,14 @@ The application is intended to measure the electricity usages of the user and pr
 
 ### Logo's
 
-![](./docs/comp_logo.svg)
+![](./docs/images/comp_logo.svg)
 
-![](./docs/app_logo.svg)
+![](./docs/images/app_logo.svg)
 
-![](./docs/inv_comp_logo.svg)
+![](./docs/images/inv_comp_logo.svg)
 
-![](./docs/inv_less_contrast_comp_logo.svg)
+![](./docs/images/inv_less_contrast_comp_logo.svg)
 
 ### Poster
 
-![](./docs/poster.png)
+![](./docs/images/poster.png)
