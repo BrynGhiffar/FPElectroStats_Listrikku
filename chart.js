@@ -4,7 +4,7 @@ let myChart = document.getElementById('dailyChart').getContext('2d');
 // Global options
 // These settings look a little different from the one in the video
 // But they do the same thing, check out: https://www.chartjs.org/docs/latest/general/fonts.html
-Chart.defaults.font.family = 'Lato';
+Chart.defaults.font.family = 'sans-serif';
 Chart.defaults.font.size = 18;
 Chart.defaults.font.color = '#777';
 
