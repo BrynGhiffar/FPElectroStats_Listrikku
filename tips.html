@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script defer src="./chart.js" type="module"></script> -->
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./tips.css">
     <title>ListrikKu</title>
     <link rel="shortcut icon" href="./docs/images/app_logo.ico" type="image/x-icon">
 </head>
@@ -21,17 +22,146 @@
             <a href="./tips.html">TIPS</a>
         </div>
     </nav>
-    <h1 style="text-align: center">Tips on Reducing Electricity Usage</h1>
-        <div style="padding-left: 450px">
-            <ul>
-                <li>Turn off any unnecessary electronics that is not currently</li>
-                <li>Turning off light bulb at least four hours a day.</li>
-                <li>Use table lamp rather than ceiling lights in work and hobby areas.</li>
-                <li>Use microwave four times a week rather than an oven.</li>
-                <li>Unplug unused electronics.</li>
-                <li>Only use your washing machine when you have full load.</li>
-                <li>Use cold water to wash your clothes.</li>
-            </ul>
+    <div class="meta-container">
+        <div class="container">
+            <div class="card">
+                <div class="card-image lamp"></div>
+                <div class="card-text">
+                    <span class="category">Simple</span>
+                    <h2>Use a table lamp instead!</h2>
+                    <p>
+                        Table lamps are usually smaller and use less energy.
+                        So, using ceiling lights in areas where a wide lighting area
+                        is unnecessary is wasteful. Use table lamps in work or hobby areas.
+                    </p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">5 Kw</div>
+                        <div class="type">Energy saved</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">313</div>
+                        <div class="type">users do this</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image washing-machine"></div>
+                <div class="card-text">
+                    <span class="category">Simple</span>
+                    <h2>Wait for full load!</h2>
+                    <p>
+                        Using a washing machine under 
+                        full load is wasteful because
+                        your washing less clothes with
+                        the same energy.
+                    </p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">40 Kw</div>
+                        <div class="type">energy saved</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">110</div>
+                        <div class="type">users do this</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image bulb"></div>
+                <div class="card-text">
+                    <span class="category">Simple</span>
+                    <h2>Down with the bulb!</h2>
+                    <p>
+                        Turning off 
+                        light bulb at 
+                        least four hours a day can
+                        save precious energy.
+                    </p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">10 Kw</div>
+                        <div class="type">energy saved</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">481</div>
+                        <div class="type">users do this</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image socket"></div>
+                <div class="card-text">
+                    <span class="category">Simple</span>
+                    <h2>Plug it out!</h2>
+                    <p>
+                        Despite being turned off
+                        some electrical appliances can still
+                        absorb electricity. Plug it out to
+                        save energy!
+                    </p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">4 Kw</div>
+                        <div class="type">energy saved</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">294</div>
+                        <div class="type">users do this</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image snowflake"></div>
+                <div class="card-text">
+                    <span class="category">Simple</span>
+                    <h2>Embrace the cold!</h2>
+                    <p>
+                        When washing your clothes
+                        a large amount of energy goes towards heating.
+                        Using cold water instead means that you're not
+                        using any electricity to heat the water.
+                    </p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">30 Kw</div>
+                        <div class="type">energy saved</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">134</div>
+                        <div class="type">users do this</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image off"></div>
+                <div class="card-text">
+                    <span class="category">Simple</span>
+                    <h2>Turn it off!</h2>
+                    <p>
+                        We know it's easy to forget to turn
+                        off your electrical appliances sometimes,
+                        especially if you have a busy life. But try
+                        your best!
+                    </p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">15 Kw</div>
+                        <div class="type">energy saved</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">203</div>
+                        <div class="type">users do this</div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 </body>
 </html>
