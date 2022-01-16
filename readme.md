@@ -13,18 +13,19 @@
 * Bryn Ghiffar - 2502087263
 * Hansel Ferren - 2501990350
 
-### Description
+## Description
 
 The application is intended to measure the electricity usages of the user and provide them insightful statistics regarding their usage.
 
-### Features
+## Features
 
 * Measure electricity usage
 * Provide electricity usage statistics
+* provides tips on how to lower electricity usage
 
-### Extra Information
+## Extra Information
 
-### Logo's
+## Logo's
 
 ![](./docs/images/comp_logo.svg)
 
@@ -34,6 +35,6 @@ The application is intended to measure the electricity usages of the user and pr
 
 ![](./docs/images/inv_less_contrast_comp_logo.svg)
 
-### Poster
+## Poster
 
 ![](./docs/images/poster.png)
