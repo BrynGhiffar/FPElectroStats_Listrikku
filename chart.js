@@ -4,7 +4,7 @@ let myChart = document.getElementById('dailyChart').getContext('2d');
 // Global options
 // These settings look a little different from the one in the video
 // But they do the same thing, check out: https://www.chartjs.org/docs/latest/general/fonts.html
-Chart.defaults.font.family = 'sans-serif';
+Chart.defaults.font.family = 'Arial, Helvetica, sans-serif';
 Chart.defaults.font.size = 18;
 Chart.defaults.font.color = '#777';
 
@@ -129,7 +129,7 @@ let dailyChart = new Chart(myChart, {
                     title: (contexts) => {
                         let day = contexts[0].label;
                         let month = currentMonth;
-                        console.log(contexts);
+                        // console.log(contexts);
                         return `${day} ${month}`;
                     }
                 }
