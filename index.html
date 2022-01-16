@@ -7,50 +7,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="./chart.js" type="module"></script>
     <link rel="stylesheet" href="./styles.css">
-    <title>ListrikKu</title>
+    <title>ListrikKu - Dashboard</title>
     <link rel="shortcut icon" href="./docs/images/app_logo.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Navbar complete with the logos -->
     <nav>
         <div class="flex-parent1">
             <img class="comp-logo" src="./docs/images/inv_less_contrast_comp_logo.svg" alt="">
         </div>
         <div class="flex-parent1 nav-bottom">
             <a href="./index.html">DASHBOARD</a>
-            <a href="./faq.html">FAQ</a>
             <a href="./tips.html">TIPS</a>
+            <a href="./articles.html">ARTICLES</a>
         </div>
     </nav>
+
+    <!-- Main body, where all the charts go -->
     <main>
         <div class="container">
             <div class="chart-container" style="position: relative; height:70vh; width:90vw">
                 <canvas id="dailyChart"></canvas>
             </div>
-            <!-- <canvas id="mychart" aria-label="mychart" role="img"></canvas> -->
         </div>
         <div class="container">
             <div class="chart-container" style="position: relative; height: 30vh; width:90vw">
                 <canvas id="monthlyChart"></canvas>
             </div>
-            <!-- <canvas id="mychart" aria-label="mychart" role="img"></canvas> -->
         </div>
         <div class="container">
             <div class="chart-container" style="position: relative; height: 50vh; width:50vw">
                 <canvas id="usageChart"></canvas>
             </div>
-            <!-- <canvas id="mychart" aria-label="mychart" role="img"></canvas> -->
         </div>
     </main>
+
+    <!-- Footer, contact details -->
     <footer>
         <div class="footer-left">
-            <img src="./docs/images/inv_less_contrast_app_logo.svg" alt="">
+            <h3>
+                CONTACT
+            </h3>
+            <ul>
+                <li>Bryn Ghiffar +62123456789</li>
+                <li>Hansel Feren +62123456789</li>
+            </ul>
         </div>
         <div class="footer-right">
-            CONTACT DETAILS
-            <ul>
-                <li>Bryn Ghiffar - 123456789</li>
-                <li>Hansel Feren - 123456789</li>
-            </ul>
+            <img src="./docs/images/inv_less_contrast_app_logo.svg" alt="">
         </div>
     </footer>
 </body>
