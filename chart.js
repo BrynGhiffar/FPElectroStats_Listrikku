@@ -49,30 +49,20 @@ let getDailyChartTitle = (month) => {
     return `DAILY | ${month}`;
 }
 
+// This is the chartJs code for the dailyChart, which is the first chart
+// in the graph.
 let dailyChart = new Chart(myChart, {
-    type: 'line', // bar, horizontalBar, pie, line, donut, radar, polarArea
+    type: 'line',
     data: {
+        // The dates in each month is the label
         labels: [...range(1, 32)], // days in the particular month
-        // labels: Utils.months({count: 7}),
         datasets: [{
             label: 'Electricity Usage (Kw)',
             fill: true,
             tension: 0.3,
-            data: [...randarray_(50, 31)], // electricity usage each day for the given month
-            // data: [...range(1, 32)].map((val) => {return randint(10, 100)}),
-            // data: [
-            //     100, 200, 150, 100, 300, 70, 250
-            // ],
+            // The data, in this chart is how many electricity is used each month
+            data: [...randarray_(50, 20, 31)], // electricity usage each day for the given month
             backgroundColor: ChartDataColor(0.7),
-            // backgroundColor: [
-            //     'rgba(100, 20, 20, 0.3) ',
-            //     'rgba(100, 20, 20, 0.4) ',
-            //     'rgba(100, 20, 20, 0.5) ',
-            //     'rgba(100, 20, 20, 0.6) ',
-            //     'rgba(100, 20, 20, 0.7) ',
-            //     'rgba(100, 20, 20, 0.8) ',
-            //     ],
-            // backgroundColor: barColors,
             borderWidth: 1,
             borderColor: ChartDataColor(0.7),
             hoverBorderWidth: 5,
@@ -82,26 +72,11 @@ let dailyChart = new Chart(myChart, {
     options: {
         maintainAspectRatio: false,
         responsive: true,
-        // onClick: (evt) => {
-        //     const points = dailyChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
-
-        //         if (points.length) {
-        //             const firstPoint = points[0];
-        //             const label = dailyChart.data.labels[firstPoint.index];
-        //             const value = dailyChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
-        //             console.log(label, value);
-        //             dailyChart.options.plugins.title.text = label;
-        //             dailyChart.update();
-        //         }
-        // },
-        // This is again different from the code in the video.
-        // indexAxis: 'y',
         plugins: {
             title: {
                 display: true,
-                // text: `Daily Electricity Usage in ${currentMonth}`,
+                // For chart title changes
                 text: getDailyChartTitle(currentMonth),
-                // different from the video but it does the same thing.
                 font: {
                     size: 30,
                 },
@@ -118,18 +93,16 @@ let dailyChart = new Chart(myChart, {
                 }
             },
             tooltip: {
-                // disables the thing you see on hover
                 enabled: true,
                 callbacks: {
+                    // The tooltip you see when you hover over your mouse.
                     label: (context) => {
-                        // let label = context.dataset.label || '';
                         let data = Math.round(context.parsed.y, 2);
                         return `Usage: ${data} Kw`;
                     },
                     title: (contexts) => {
                         let day = contexts[0].label;
                         let month = currentMonth;
-                        // console.log(contexts);
                         return `${day} ${month}`;
                     }
                 }
@@ -145,7 +118,6 @@ let dailyChart = new Chart(myChart, {
         },
         scales: {
             y : {
-                // display: false,
                 beginAtZero: true,
                 grid: {
                     color: ChartDataColor(0.7),
@@ -168,43 +140,28 @@ let dailyChart = new Chart(myChart, {
     },
 });
 
-let monthlyData = [...randarray_(50, 12)];
+//  Electricity usage each month, randomly generated
+let monthlyData = [...randarray_(1000, 400, 12)];
 
 let monthlyChart = new Chart(document.getElementById('monthlyChart').getContext('2d'), {
     type: 'bar',
     data: {
         labels: months,
-        // labels: Utils.months({count: 7}),
         datasets: [{
             label: 'Electricity Usage (Kw)',
             fill: true,
             tension: 1,
             data: monthlyData,
-            // data: [...range(1, 32)].map((val) => {return randint(10, 100)}),
-            // data: [
-            //     100, 200, 150, 100, 300, 70, 250
-            // ],
-            // backgroundColor: 'rgba(200, 20, 20, 0.6)',
-            // backgroundColor: monthlyData.map((val) => {return `rgba(251, 212, 0, ${val / 100})`}),
             backgroundColor: ChartDataColor(0.7),
-            // backgroundColor: [
-            //     'rgba(100, 20, 20, 0.3) ',
-            //     'rgba(100, 20, 20, 0.4) ',
-            //     'rgba(100, 20, 20, 0.5) ',
-            //     'rgba(100, 20, 20, 0.6) ',
-            //     'rgba(100, 20, 20, 0.7) ',
-            //     'rgba(100, 20, 20, 0.8) ',
-            //     ],
-            // backgroundColor: barColors,
             borderWidth: 0,
             borderColor: ChartDataColor(0.7),
-            // hoverBorderWidth: 4,
-            // hoverBorderColor: ChartDataColor,
         }]
     },
     options: {
         maintainAspectRatio: false,
         responsive: true,
+        // Whenever a month is clicked the daily chart
+        // changes.
         onClick: (evt) => {
             let theChart = monthlyChart;
             const points = theChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
@@ -217,7 +174,7 @@ let monthlyChart = new Chart(document.getElementById('monthlyChart').getContext(
                     dailyChart.options.plugins.title.text = getDailyChartTitle(currentMonth);
                     let days = getDays(currentMonth, 2021);
                     dailyChart.data.labels = [...range(1, days + 1)]
-                    dailyChart.data.datasets[0].data = [...randarray_(50, days)];
+                    dailyChart.data.datasets[0].data = [...randarray_(50, 20, days)];
                     dailyChart.update();
                 }
         },
@@ -234,7 +191,6 @@ let monthlyChart = new Chart(document.getElementById('monthlyChart').getContext(
             tooltip: {
                 callbacks: {
                     label: (context) => {
-                        // let label = context.dataset.label || '';
                         let data = Math.round(context.parsed.y, 2);
                         return `Usage: ${data} Kw`;
                     },
@@ -246,7 +202,6 @@ let monthlyChart = new Chart(document.getElementById('monthlyChart').getContext(
         },
         scales: {
             y : {
-                // display: false,
                 beginAtZero: true,
                 grid: {
                     color: ChartDataColor(0.7),
@@ -276,43 +231,22 @@ let usageChart = new Chart(document.getElementById('usageChart').getContext('2d'
     type: 'doughnut',
     data: {
         labels: wares,
-        // labels: Utils.months({count: 7}),
         datasets: [{
             label: 'Electricity Usage (Kw)',
             fill: true,
-            // tension: 1,
-            data: [1, 2, 3, 4],
+            data: [...randarray_(20, 10, 4)],
             backgroundColor: [ChartDataColor(0.7), ChartDataColor(0.8), ChartDataColor(0.9), ChartDataColor(1)],
             borderWidth: 0,
             hoverOffset: 8,
-            // borderColor: ChartDataColor(0.7),
-            // hoverBorderWidth: 4,
-            // hoverBorderColor: ChartDataColor,
         }]
     },
     options: {
         maintainAspectRatio: false,
         responsive: true,
-        // onClick: (evt) => {
-        //     let theChart = monthlyChart;
-        //     const points = theChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
-        //         if (points.length) {
-        //             const firstPoint = points[0];
-
-        //             currentMonth = theChart.data.labels[firstPoint.index];
-        //             const value = theChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
-        //             // console.log(label, value);
-        //             dailyChart.options.plugins.title.text = getDailyChartTitle(currentMonth);
-        //             let days = getDays(currentMonth, 2021);
-        //             dailyChart.data.labels = [...range(1, days + 1)]
-        //             dailyChart.data.datasets[0].data = [...randarray_(50, days)];
-        //             dailyChart.update();
-        //         }
-        // },
         plugins: {
             title: {
                 display: true,
-                text: "USAGE",
+                text: "DAILY BREAKDOWN",
                 color: ChartDataColor(1),
                 font: {
                     size: 30,
@@ -322,8 +256,6 @@ let usageChart = new Chart(document.getElementById('usageChart').getContext('2d'
             tooltip: {
                 callbacks: {
                     label: (context) => {
-                        // let label = context.dataset.label || '';
-                        // console.log(context);
                         let data = Math.round(context.parsed, 2);
                         return `${context.label}: ${data} Kw`;
                     },
@@ -333,31 +265,5 @@ let usageChart = new Chart(document.getElementById('usageChart').getContext('2d'
                 display: true,
             }
         },
-        // scales: {
-        //     y : {
-        //         // display: false,
-        //         beginAtZero: true,
-        //         grid: {
-        //             display: false,
-        //             color: ChartDataColor(0.7),
-        //             lineWidth: 0.5,
-        //         },
-        //         ticks: {
-        //             display: false,
-        //             color: ChartDataColor(1),
-        //         }
-        //     },
-        //     x : {
-        //         grid: {
-        //             display: false,
-        //             color: ChartDataColor(0.7),
-        //             lineWidth: 0.5,
-        //         },
-        //         ticks: {
-        //             display: false,
-        //             color: ChartDataColor(1),
-        //         }
-        //     }
-        // }
     }
 });
