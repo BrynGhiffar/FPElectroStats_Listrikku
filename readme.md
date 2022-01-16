@@ -23,8 +23,6 @@ The application is intended to measure the electricity usages of the user and pr
 * Provide electricity usage statistics
 * provides tips on how to lower electricity usage
 
-## Extra Information
-
 ## Logo's
 
 ![](./docs/images/comp_logo.svg)
