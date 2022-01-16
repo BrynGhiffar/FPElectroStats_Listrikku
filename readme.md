@@ -23,6 +23,10 @@ The application is intended to measure the electricity usages of the user and pr
 * Provide electricity usage statistics
 * provides tips on how to lower electricity usage
 
+## Storyboard
+
+![](./docs/images/story_boarding.jpg)
+
 ## Logo's
 
 ![](./docs/images/comp_logo.svg)
