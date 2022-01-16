@@ -269,3 +269,95 @@ let monthlyChart = new Chart(document.getElementById('monthlyChart').getContext(
         }
     }
 });
+
+const wares = ['Microwave', 'Computer', 'Lights', 'Air Conditioner']
+
+let usageChart = new Chart(document.getElementById('usageChart').getContext('2d'), {
+    type: 'doughnut',
+    data: {
+        labels: wares,
+        // labels: Utils.months({count: 7}),
+        datasets: [{
+            label: 'Electricity Usage (Kw)',
+            fill: true,
+            // tension: 1,
+            data: [1, 2, 3, 4],
+            backgroundColor: [ChartDataColor(0.7), ChartDataColor(0.8), ChartDataColor(0.9), ChartDataColor(1)],
+            borderWidth: 0,
+            hoverOffset: 8,
+            // borderColor: ChartDataColor(0.7),
+            // hoverBorderWidth: 4,
+            // hoverBorderColor: ChartDataColor,
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        // onClick: (evt) => {
+        //     let theChart = monthlyChart;
+        //     const points = theChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+        //         if (points.length) {
+        //             const firstPoint = points[0];
+
+        //             currentMonth = theChart.data.labels[firstPoint.index];
+        //             const value = theChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+        //             // console.log(label, value);
+        //             dailyChart.options.plugins.title.text = getDailyChartTitle(currentMonth);
+        //             let days = getDays(currentMonth, 2021);
+        //             dailyChart.data.labels = [...range(1, days + 1)]
+        //             dailyChart.data.datasets[0].data = [...randarray_(50, days)];
+        //             dailyChart.update();
+        //         }
+        // },
+        plugins: {
+            title: {
+                display: true,
+                text: "USAGE",
+                color: ChartDataColor(1),
+                font: {
+                    size: 30,
+                },
+                padding: 30,
+            },
+            tooltip: {
+                callbacks: {
+                    label: (context) => {
+                        // let label = context.dataset.label || '';
+                        // console.log(context);
+                        let data = Math.round(context.parsed, 2);
+                        return `${context.label}: ${data} Kw`;
+                    },
+                }
+            },
+            legend: {
+                display: true,
+            }
+        },
+        // scales: {
+        //     y : {
+        //         // display: false,
+        //         beginAtZero: true,
+        //         grid: {
+        //             display: false,
+        //             color: ChartDataColor(0.7),
+        //             lineWidth: 0.5,
+        //         },
+        //         ticks: {
+        //             display: false,
+        //             color: ChartDataColor(1),
+        //         }
+        //     },
+        //     x : {
+        //         grid: {
+        //             display: false,
+        //             color: ChartDataColor(0.7),
+        //             lineWidth: 0.5,
+        //         },
+        //         ticks: {
+        //             display: false,
+        //             color: ChartDataColor(1),
+        //         }
+        //     }
+        // }
+    }
+});
