@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script defer src="./chart.js" type="module"></script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./login.css">
     <title>ListrikKu - Dashboard</title>
     <link rel="shortcut icon" href="./docs/images/app_logo.ico" type="image/x-icon">
 </head>
@@ -16,31 +15,23 @@
         <div class="flex-parent1">
             <img class="comp-logo" src="./docs/images/inv_less_contrast_comp_logo.svg" alt="">
         </div>
-        <div class="flex-parent1 nav-bottom">
-            <a href="./index.html">DASHBOARD</a>
-            <a href="./tips.html">TIPS</a>
-            <a href="./articles.html">ARTICLES</a>
-        </div>
     </nav>
 
     <!-- Main body, where all the charts go -->
-    <main>
-        <div class="container">
-            <div class="chart-container" style="position: relative; height:70vh; width:90vw">
-                <canvas id="dailyChart"></canvas>
+    <div class="meta-container">
+        <div class="login-form">
+            <div class="input-field">
+                <p>Machine Number</p>
+                <input type="text" placeholder="Machine Number">
             </div>
-        </div>
-        <div class="container">
-            <div class="chart-container" style="position: relative; height: 30vh; width:90vw">
-                <canvas id="monthlyChart"></canvas>
+            <div class="input-field">
+                <p>Password</p>
+                <input type="password" placeholder="Password">
+                <br>
             </div>
+            <button onclick="window.location.href='/index.html'">LOGIN</button>
         </div>
-        <div class="container">
-            <div class="chart-container" style="position: relative; height: 50vh; width:50vw">
-                <canvas id="usageChart"></canvas>
-            </div>
-        </div>
-    </main>
+    </div>
 
     <!-- Footer, contact details -->
     <footer>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="./chart.js" type="module"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>ListrikKu - Dashboard</title>
+    <link rel="shortcut icon" href="./docs/images/app_logo.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar complete with the logos -->
+    <nav>
+        <div class="flex-parent1">
+            <img class="comp-logo" src="./docs/images/inv_less_contrast_comp_logo.svg" alt="">
+        </div>
+        <div class="flex-parent1 nav-bottom">
+            <a href="./dashboard.html">DASHBOARD</a>
+            <a href="./tips.html">TIPS</a>
+            <a href="./articles.html">ARTICLES</a>
+            <a href="./recharge.html">RECHARGE</a>
+        </div>
+    </nav>
+
+    <!-- Main body, where all the charts go -->
+    <main>
+        <div class="container">
+            <div class="chart-container" style="position: relative; height:70vh; width:90vw">
+                <canvas id="dailyChart"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="chart-container" style="position: relative; height: 30vh; width:90vw">
+                <canvas id="monthlyChart"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="chart-container" style="position: relative; height: 50vh; width:50vw">
+                <canvas id="usageChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer, contact details -->
+    <footer>
+        <div class="footer-left">
+            <h3>
+                CONTACT
+            </h3>
+            <ul>
+                <li>Bryn Ghiffar +62123456789</li>
+                <li>Hansel Feren +62123456789</li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <img src="./docs/images/inv_less_contrast_app_logo.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>

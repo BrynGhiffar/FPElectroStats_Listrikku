@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./recharge.css">
+    <script src="./rechargeutils.js"></script>
+    <title>ListrikKu</title>
+    <link rel="shortcut icon" href="./docs/images/app_logo.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar complete with the logos -->
+    <nav>
+        <div class="flex-parent1">
+            <img class="comp-logo" src="./docs/images/inv_less_contrast_comp_logo.svg" alt="">
+        </div>
+        <div class="flex-parent1 nav-bottom">
+            <a href="./dashboard.html">DASHBOARD</a>
+            <a href="./tips.html">TIPS</a>
+            <a href="./articles.html">ARTICLES</a>
+            <a href="./recharge.html">RECHARGE</a>
+        </div>
+    </nav>
+    <div class="meta-container">
+        <div class="recharge-container">
+            <div class="option">
+                <h1>RECHARGE</h1>
+                <button class="payment s0 inactive" onclick="onClick(event)">Rp. 1.000.000,00</button>
+                <button class="payment s1 inactive" onclick="onClick(event)">Rp. 800.000,00</button>
+                <button class="payment s2 inactive" onclick="onClick(event)">Rp. 600.000,00</button>
+                <button class="payment s3 inactive" onclick="onClick(event)">Rp. 400.000,00</button>
+                <button class="payment s4 inactive" onclick="onClick(event)">Rp. 200.000,00</button>
+                <button class="payment s5 inactive" onclick="onClick(event)">Rp. 100.000,00</button>
+                <button class="payment s6 inactive" onclick="onClick(event)">Rp. 50.000,00</button>
+            </div>
+            <div class="option">
+                <h1>METHOD</h1>
+                <button class="method s0 inactive" onclick="onClick(event)">GoPay</button>
+                <button class="method s1 inactive" onclick="onClick(event)">Paypal</button>
+                <button class="method s2 inactive" onclick="onClick(event)">Debit Card</button>
+                <button class="method s3 inactive" onclick="onClick(event)">Virtual Transfer</button>
+            </div>
+            <div class="confirm">
+                <button onclick="onConfirm(event)">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
