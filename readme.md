@@ -28,7 +28,7 @@ The application is intended to measure the electricity usages of the user and pr
 ![](./docs/images/story_boarding.jpg)
 
 ## Test case
-![](./docs/test_case.png)
+![](./docs/test_cases.png)
 
 ## Logo's
 
