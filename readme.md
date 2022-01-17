@@ -11,7 +11,7 @@
 **Members:**
 
 * Bryn Ghiffar - 2502087263
-* Hansel Ferren - 2501990350
+* Hansel Faren - 2501990350
 
 ## Description
 
